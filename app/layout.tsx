@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import Navbar from "@/components/ui/navbar";
+import { BentoGrid } from "@/components/ui/bento-grid";
+import { BentoGridSecond } from "./bento-grid/page";
+const inter = Inter();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} } antialiased`}
       >
-        {children}
+        <AuroraBackground>
+          <Navbar />
+          {children}
+          
+        </AuroraBackground>
+        <BentoGrid>
+          <BentoGridSecond />
+        </BentoGrid>
       </body>
     </html>
   );
