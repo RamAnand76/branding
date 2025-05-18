@@ -5,7 +5,8 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import Navbar from "@/components/ui/navbar";
 import { BentoGrid } from "@/components/ui/bento-grid";
 import { BentoGridSecond } from "./bento-grid/page";
-const inter = Inter();
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
