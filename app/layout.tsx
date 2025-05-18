@@ -20,14 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} } antialiased`}
-      >
+      <body className={`${inter.className} } antialiased`}>
         <AuroraBackground>
           <Navbar />
           {children}
-          
         </AuroraBackground>
+        <div className="text-center py-20">
+          <h2 className="text-4xl font-bold mb-4">Features</h2>
+          <p className="text-xl text-gray-600 mb-8">Our Aim is to provide exceptional UI components for modern web development</p>
+        </div>
         <BentoGrid>
           <BentoGridSecond />
         </BentoGrid>
