@@ -3,8 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import Navbar from "@/components/ui/navbar";
-import { BentoGrid } from "@/components/ui/bento-grid";
-import { BentoGridSecond } from "./bento-grid/page";
+import WobbleCardDemo from "@/components/ui/wobble-card-demo";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,9 +28,7 @@ export default function RootLayout({
           <h2 className="text-4xl font-bold mb-4">Features</h2>
           <p className="text-xl text-gray-600 mb-8">Our Aim is to provide exceptional UI components for modern web development</p>
         </div>
-        <BentoGrid>
-          <BentoGridSecond />
-        </BentoGrid>
+        <WobbleCardDemo />
       </body>
     </html>
   );
